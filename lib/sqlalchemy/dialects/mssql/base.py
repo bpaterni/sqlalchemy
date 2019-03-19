@@ -1533,7 +1533,7 @@ class MSSQLCompiler(compiler.SQLCompiler):
             for t in [from_table] + extra_froms)
 
     def visit_sequence(self, seq):
-        return 'NEXT VALUE FOR }'.format(
+        return 'NEXT VALUE FOR {}'.format(
                 self.preparer.format_sequence(seq))
 
 
